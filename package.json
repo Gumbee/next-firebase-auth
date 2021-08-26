@@ -1,6 +1,6 @@
 {
-  "name": "next-firebase-auth",
-  "version": "0.13.3",
+  "name": "@gumbee/next-firebase-auth",
+  "version": "0.13.4",
   "description": "Simple Firebase authentication for all Next.js rendering strategies",
   "keywords": [
     "Next",
@@ -13,7 +13,10 @@
   "browser": "build/index.browser.js",
   "main": "build/index.node.js",
   "types": "build/index.d.ts",
-  "repository": "git@github.com:gladly-team/next-firebase-auth.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gladly-team/next-firebase-auth.git"
+  },
   "author": "Gladly Team",
   "license": "MIT",
   "scripts": {
@@ -57,7 +60,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "firebase": "^8.8.1",
+    "firebase": "9.0.0",
     "firebase-admin": "^9.11.0",
     "jest": "^27.0.6",
     "jsdom": "^16.7.0",
@@ -75,11 +78,11 @@
     "typescript": "^4.3.5",
     "webpack": "^5.48.0",
     "webpack-bundle-analyzer": "^4.4.2",
-    "webpack-cli": "^4.7.2",
+    "webpack-cli": "^4.8.0",
     "webpack-node-externals": "^3.0.0"
   },
   "peerDependencies": {
-    "firebase": ">=7.0.0 <9",
+    "firebase": ">=9.0.0",
     "firebase-admin": "^9.0.0",
     "next": ">=9.5.0 <12",
     "react": ">=16.8.0 <18",
@@ -91,5 +94,12 @@
   },
   "files": [
     "/build"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/gladly-team/next-firebase-auth/issues"
+  },
+  "homepage": "https://github.com/gladly-team/next-firebase-auth#readme",
+  "directories": {
+    "example": "example"
+  }
 }

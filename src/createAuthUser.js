@@ -96,12 +96,12 @@ const createAuthUser = ({
   let getIdTokenFunc = async () => null
 
   // When not on the client side, the "signOut" method is a noop.
-  let firebase
+  let firebaseAuth
   if (isClientSide()) {
     // eslint-disable-next-line global-require
     require('firebase/auth')
     // eslint-disable-next-line global-require
-    firebase = require('firebase/app').default
+    firebaseAuth = require('firebase/auth').getAuth
   }
   let signOut = async () => {}
 
@@ -118,7 +118,7 @@ const createAuthUser = ({
     displayName = firebaseUserClientSDK.displayName
     photoURL = firebaseUserClientSDK.photoURL
     getIdTokenFunc = async () => firebaseUserClientSDK.getIdToken()
-    signOut = async () => firebase.auth().signOut()
+    signOut = async () => firebaseAuth.signOut()
     tokenString = null
   } else if (firebaseUserAdminSDK) {
     /**
