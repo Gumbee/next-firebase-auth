@@ -1,6 +1,6 @@
 {
   "name": "@gumbee/next-firebase-auth",
-  "version": "0.13.4",
+  "version": "0.13.42",
   "description": "Simple Firebase authentication for all Next.js rendering strategies",
   "keywords": [
     "Next",

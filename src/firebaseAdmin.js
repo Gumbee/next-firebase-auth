@@ -93,6 +93,7 @@ export const getCustomIdAndRefreshTokens = async (token) => {
 
   // It's important that we pass the same user ID here, otherwise
   // Firebase will create a new user.
+
   const customToken = await admin.auth().createCustomToken(AuthUser.id)
 
   // https://firebase.google.com/docs/reference/rest/auth/#section-verify-custom-token
